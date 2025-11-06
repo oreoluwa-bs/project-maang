@@ -1,3 +1,4 @@
+// O(nlogn)  -  the performant option is priority queue O(nlogk)
 function topKFrequentElements(nums: number[], target: number): number[] {
   const frq = new Map<number, number>();
 
@@ -12,17 +13,6 @@ function topKFrequentElements(nums: number[], target: number): number[] {
     .map(([n]) => n);
   return ans;
 }
-
-/*
- * There are a few approaches
- *
- * Linear - go through find the a potential value and find the sum (O(n))
- *
- * Binary Search -  (sort) and then use binary search (O(n))
- *
- * Hashmap
- *
- */
 
 (function run() {
   console.log(topKFrequentElements([1, 1, 1, 2, 2, 3], 2)); // [1,2]
